@@ -1,5 +1,5 @@
 {% set name = "pytest-filter-subpackage" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b7d8fc3a42989b652032e6b0998a87dd00d43bf2b013ba5d2e86f930da149ae8
+  sha256: 1faea36717803e524588d6c109d26d20d3b34422e8d6a96812758977dca01782
 
 build:
   number: 0
