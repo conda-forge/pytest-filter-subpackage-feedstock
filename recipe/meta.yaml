@@ -10,7 +10,7 @@ source:
   sha256: 3f468f1b36518128869b95deab661ba45ed6293854329fef14da4c8cac78af56
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -18,9 +18,9 @@ requirements:
   host:
     - pip
     - setuptools_scm
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pytest >=4.6
     - packaging
 
@@ -29,6 +29,7 @@ test:
     - pytest
     - pytest-doctestplus
     - pytest-cov
+    - python {{ python_min }}
   imports:
     - pytest_filter_subpackage
 
